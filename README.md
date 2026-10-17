@@ -1,0 +1,1 @@
+# adachi-100th-sticker
