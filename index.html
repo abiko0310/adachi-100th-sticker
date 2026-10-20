@@ -33,11 +33,22 @@ body{
   color:#9b7b4d;
 }
 
+/* ① 番組タイトルを強調 */
 .channel{
-  font-size:14px;
-  font-weight:700;
-  margin:12px 0;
-  line-height:1.7;
+  font-size:clamp(19px,3.1vw,28px);
+  font-weight:800;
+  color:#24344c;
+  margin:15px auto 20px;
+  line-height:1.55;
+  letter-spacing:.015em;
+}
+
+.channel .service{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  color:#718096;
+  margin-bottom:7px;
 }
 
 h1{
@@ -60,18 +71,57 @@ h1 span{color:#d89a25}
   margin:18px auto 0;
 }
 
+/* ③ 公開案内 */
 .notice{
   background:#fff;
   border:1px solid #eadfcf;
-  border-radius:15px;
-  padding:20px;
+  border-radius:18px;
+  padding:25px 22px;
   margin:28px auto 42px;
   max-width:750px;
-  line-height:2;
-  font-size:14px;
+  box-shadow:0 6px 20px #25364c08;
 }
 
-.notice strong{color:#b77b23}
+.notice-title{
+  font-size:19px;
+  font-weight:800;
+  color:#24344c;
+  margin-bottom:18px;
+}
+
+.early{
+  font-size:16px;
+  line-height:1.8;
+  font-weight:700;
+}
+
+.early strong{
+  color:#D93683;
+  font-size:clamp(21px,3vw,27px);
+  font-weight:800;
+}
+
+.release-box{
+  background:#f7f4ef;
+  border:1px solid #e9ddcc;
+  border-radius:13px;
+  padding:17px 12px;
+  margin-top:20px;
+}
+
+.release-box .release-item{
+  font-size:15px;
+  font-weight:700;
+  color:#514739;
+  margin-bottom:8px;
+}
+
+.release-box .release-date{
+  font-size:clamp(16px,2.7vw,21px);
+  font-weight:800;
+  color:#a36c22;
+  line-height:1.6;
+}
 
 .section-title{
   font-size:24px;
@@ -81,7 +131,7 @@ h1 span{color:#d89a25}
 .section-desc{
   color:#68788a;
   font-size:14px;
-  line-height:1.8;
+  line-height:1.9;
   margin-bottom:24px;
 }
 
@@ -104,21 +154,6 @@ h1 span{color:#d89a25}
 .gift h3{
   font-size:17px;
   margin:4px 0 12px;
-}
-
-.preview{
-  height:330px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:18px;
-  overflow:hidden;
-}
-
-.preview img{
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;
 }
 
 .btn{
@@ -205,7 +240,11 @@ h1 span{color:#d89a25}
 /* 透過PNGを確認できる市松模様 */
 .phrase .preview{
   height:170px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   margin-bottom:12px;
+  overflow:hidden;
   border-radius:10px;
   border:1px solid #eeeeee;
   background-color:#fff;
@@ -248,10 +287,10 @@ h1 span{color:#d89a25}
 @media(max-width:650px){
   .wrap{padding:30px 14px 50px}
   .gifts{grid-template-columns:1fr}
-  .preview{height:330px}
   .coming{min-height:300px}
   .section-title{font-size:21px}
   .phrase .preview{height:170px}
+  .notice{padding:22px 15px}
 }
 </style>
 </head>
@@ -264,7 +303,7 @@ THANK YOU FOR WATCHING!
 </div>
 
 <div class="channel">
-ニコニコチャンネル＋<br>
+<span class="service">ニコニコチャンネル＋</span>
 足立康史の政策×政局 徹底解説CH
 </div>
 
@@ -284,12 +323,26 @@ THANK YOU FOR WATCHING!
 </p>
 
 <div class="notice">
-<strong>🎁 全12点プレゼント！</strong><br>
-口癖デジタルステッカー10点は先行公開中！<br>
-記念ステッカー＆スマホ壁紙は<br>
-<strong>
-10月22日（木）21時よりダウンロード開始予定
-</strong>
+
+<div class="notice-title">
+🎁 全12点プレゼント！
+</div>
+
+<div class="early">
+「口癖デジタルステッカー10点」は<br>
+<strong>先行公開中！</strong>
+</div>
+
+<div class="release-box">
+<div class="release-item">
+記念ステッカー＆スマホ壁紙は
+</div>
+<div class="release-date">
+10月22日（木）21時より<br>
+ダウンロード開始予定
+</div>
+</div>
+
 </div>
 
 <h2 class="section-title">
@@ -346,7 +399,8 @@ THANK YOU FOR WATCHING!
 
 <p class="section-desc">
 足立康史おなじみのフレーズと、<br>
-本人が手描きした〈こくうさ〉のオリジナルステッカー。<br>
+本人手描き〈こくうさ〉を組み合わせたデジタルステッカー。<br>
+<br>
 <strong>全10種類を無料でダウンロードできます！</strong><br>
 背景透過PNGなので、画像などに重ねてお楽しみいただけます。<br>
 ※市松模様は透過部分を示す表示用の背景です。
