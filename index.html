@@ -113,12 +113,13 @@ h1 span{color:#d89a25}
   object-fit:contain;
 }
 
+/* ダウンロードボタン：ピンク */
 .btn{
   display:block;
   width:100%;
   padding:15px;
   border-radius:50px;
-  background:#24344c;
+  background:#D93683;
   color:#fff;
   font-size:14px;
   font-weight:700;
@@ -126,7 +127,9 @@ h1 span{color:#d89a25}
   margin-top:auto;
 }
 
-.btn:hover{background:#354e70}
+.btn:hover{
+  background:#BE286E;
+}
 
 .coming{
   min-height:330px;
@@ -164,6 +167,10 @@ h1 span{color:#d89a25}
   background:#c8cdd3;
   color:#fff;
   cursor:default;
+}
+
+.disabled:hover{
+  background:#c8cdd3;
 }
 
 .phrases{
@@ -204,7 +211,9 @@ h1 span{color:#d89a25}
 }
 
 @media(max-width:800px){
-  .phrases{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .phrases{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
 }
 
 @media(max-width:650px){
@@ -242,7 +251,10 @@ h1 span{color:#d89a25}
 <strong>10月22日（木）21時よりダウンロード開始予定</strong>
 </div>
 
-<h2 class="section-title">🎉 配信100回記念 特別プレゼント</h2>
+<h2 class="section-title">
+🎉 配信100回記念 特別プレゼント
+</h2>
+
 <p class="section-desc">
 配信後に制作する2点は、10月22日21時より公開予定です。
 </p>
