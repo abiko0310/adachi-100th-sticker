@@ -9,9 +9,7 @@
 <title>配信100回記念｜プレゼント特設ページ</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -47,14 +45,19 @@ h1{
   margin:15px 0;
 }
 
-h1 span{
-  color:#d89a25;
-}
+h1 span{color:#d89a25}
 
 .lead{
   font-size:15px;
   line-height:2;
   color:#5d6a7c;
+}
+
+.share-note{
+  font-size:13px;
+  color:#68788a;
+  line-height:1.9;
+  margin:18px auto 0;
 }
 
 .notice{
@@ -68,9 +71,7 @@ h1 span{
   font-size:14px;
 }
 
-.notice strong{
-  color:#b77b23;
-}
+.notice strong{color:#b77b23}
 
 .section-title{
   font-size:24px;
@@ -120,7 +121,6 @@ h1 span{
   object-fit:contain;
 }
 
-/* ダウンロードボタン：ピンク */
 .btn{
   display:block;
   width:100%;
@@ -134,11 +134,8 @@ h1 span{
   margin-top:auto;
 }
 
-.btn:hover{
-  background:#BE286E;
-}
+.btn:hover{background:#BE286E}
 
-/* 制作中の2点 */
 .coming{
   min-height:330px;
   display:flex;
@@ -159,10 +156,16 @@ h1 span{
   font-weight:700;
 }
 
+.coming .scene{
+  font-size:15px;
+  color:#735d45;
+  margin:18px 0 4px;
+}
+
 .coming .main{
   font-size:23px;
   font-weight:700;
-  margin:16px 0;
+  margin:8px 0 16px;
 }
 
 .coming .date{
@@ -178,7 +181,6 @@ h1 span{
   cursor:default;
 }
 
-/* 口癖ステッカー10枚 */
 .phrases{
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
@@ -200,23 +202,18 @@ h1 span{
   margin-bottom:8px;
 }
 
-/*
-  透過PNG確認用の市松模様。
-  画像そのものには模様を追加しない。
-*/
+/* 透過PNGを確認できる市松模様 */
 .phrase .preview{
   height:170px;
   margin-bottom:12px;
   border-radius:10px;
   border:1px solid #eeeeee;
-
-  background-color:#ffffff;
+  background-color:#fff;
   background-image:
     linear-gradient(45deg,#e9e9e9 25%,transparent 25%),
     linear-gradient(-45deg,#e9e9e9 25%,transparent 25%),
     linear-gradient(45deg,transparent 75%,#e9e9e9 75%),
     linear-gradient(-45deg,transparent 75%,#e9e9e9 75%);
-
   background-size:20px 20px;
   background-position:
     0 0,
@@ -249,29 +246,12 @@ h1 span{
 }
 
 @media(max-width:650px){
-  .wrap{
-    padding:30px 14px 50px;
-  }
-
-  .gifts{
-    grid-template-columns:1fr;
-  }
-
-  .preview{
-    height:330px;
-  }
-
-  .coming{
-    min-height:300px;
-  }
-
-  .section-title{
-    font-size:21px;
-  }
-
-  .phrase .preview{
-    height:170px;
-  }
+  .wrap{padding:30px 14px 50px}
+  .gifts{grid-template-columns:1fr}
+  .preview{height:330px}
+  .coming{min-height:300px}
+  .section-title{font-size:21px}
+  .phrase .preview{height:170px}
 }
 </style>
 </head>
@@ -298,6 +278,11 @@ THANK YOU FOR WATCHING!
 記念デジタルステッカー＆スマホ壁紙をプレゼント！
 </p>
 
+<p class="share-note">
+※SNSでのシェアや個人的なご利用など、<br>
+ご自由にお楽しみください。
+</p>
+
 <div class="notice">
 <strong>🎁 全12点プレゼント！</strong><br>
 口癖デジタルステッカー10点は先行公開中！<br>
@@ -322,6 +307,7 @@ THANK YOU FOR WATCHING!
 
 <div class="coming">
 <div class="en">COMING SOON</div>
+<div class="scene">10/21配信シーンより</div>
 <div class="main">ただいま制作中！</div>
 <div class="date">
 10月22日（木）21時より<br>
@@ -339,6 +325,7 @@ THANK YOU FOR WATCHING!
 
 <div class="coming">
 <div class="en">COMING SOON</div>
+<div class="scene">10/21配信シーンより</div>
 <div class="main">ただいま制作中！</div>
 <div class="date">
 10月22日（木）21時より<br>
@@ -370,9 +357,7 @@ THANK YOU FOR WATCHING!
 <p class="section-desc" style="margin-top:35px">
 ※画像は個別にダウンロードできます。<br>
 ※スマートフォンで画像が表示された場合は、
-画像を長押しして保存してください。<br>
-※SNSでのシェアや個人的なご利用など、
-ご自由にお楽しみください。
+画像を長押しして保存してください。
 </p>
 
 <div class="foot">
