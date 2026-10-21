@@ -83,41 +83,26 @@ h1 span{color:#d89a25}
 .notice-title{
   font-size:19px;
   font-weight:800;
-  color:#24344c;
-  margin-bottom:18px;
-}
-
-.early{
-  font-size:16px;
-  line-height:1.8;
-  font-weight:700;
-}
-
-.early strong{
-  color:#D93683;
-  font-size:clamp(21px,3vw,27px);
-  font-weight:800;
+  margin-bottom:15px;
 }
 
 .release-box{
   background:#f7f4ef;
   border:1px solid #e9ddcc;
   border-radius:13px;
-  padding:17px 12px;
-  margin-top:20px;
+  padding:20px 12px;
 }
 
 .release-box .release-item{
-  font-size:15px;
+  font-size:16px;
   font-weight:700;
-  color:#514739;
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 
 .release-box .release-date{
-  font-size:clamp(16px,2.7vw,21px);
+  font-size:clamp(20px,3.3vw,27px);
   font-weight:800;
-  color:#a36c22;
+  color:#D93683;
   line-height:1.6;
 }
 
@@ -235,34 +220,34 @@ h1 span{color:#d89a25}
   margin-bottom:8px;
 }
 
-/* 透過PNGを確認できる市松模様 */
+/* 口癖ステッカーの公開前表示 */
 .phrase .preview{
   height:170px;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   margin-bottom:12px;
   overflow:hidden;
   border-radius:10px;
-  border:1px solid #eeeeee;
-  background-color:#fff;
-  background-image:
-    linear-gradient(45deg,#e9e9e9 25%,transparent 25%),
-    linear-gradient(-45deg,#e9e9e9 25%,transparent 25%),
-    linear-gradient(45deg,transparent 75%,#e9e9e9 75%),
-    linear-gradient(-45deg,transparent 75%,#e9e9e9 75%);
-  background-size:20px 20px;
-  background-position:
-    0 0,
-    0 10px,
-    10px -10px,
-    -10px 0;
+  background:#f7f4ef;
+  border:1px dashed #d7c9b5;
+  padding:10px;
 }
 
-.phrase .preview img{
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;
+.phrase .preview .soon{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+  color:#a68a66;
+}
+
+.phrase .preview .date{
+  font-size:13px;
+  font-weight:700;
+  color:#735d45;
+  line-height:1.8;
+  margin-top:12px;
 }
 
 .phrase .btn{
@@ -287,7 +272,6 @@ h1 span{color:#d89a25}
   .gifts{grid-template-columns:1fr}
   .coming{min-height:300px}
   .section-title{font-size:21px}
-  .phrase .preview{height:170px}
   .notice{padding:22px 15px}
 }
 </style>
@@ -321,26 +305,19 @@ THANK YOU FOR WATCHING!
 </p>
 
 <div class="notice">
-
 <div class="notice-title">
 🎁 全12点プレゼント！
 </div>
 
-<div class="early">
-「口癖デジタルステッカー10点」は<br>
-<strong>先行公開中！</strong>
-</div>
-
 <div class="release-box">
 <div class="release-item">
-記念ステッカー＆スマホ壁紙は
+記念ステッカー・スマホ壁紙・口癖ステッカー
 </div>
 <div class="release-date">
 10月22日（木）21時より<br>
 ダウンロード開始予定
 </div>
 </div>
-
 </div>
 
 <h2 class="section-title">
@@ -348,7 +325,7 @@ THANK YOU FOR WATCHING!
 </h2>
 
 <p class="section-desc">
-配信後に制作する2点は、10月22日21時より公開予定です。
+記念ステッカーとスマホ壁紙は、配信後に制作して公開します。
 </p>
 
 <section class="gifts">
@@ -391,7 +368,6 @@ THANK YOU FOR WATCHING!
 
 </section>
 
-<!-- 今回の修正箇所 -->
 <h2 class="section-title">
 🐰「足立康史の口癖」デジタルステッカー
 </h2>
@@ -400,15 +376,13 @@ THANK YOU FOR WATCHING!
 足立康史おなじみのフレーズと、<br>
 本人手描き〈こくうさ〉を組み合わせたデジタルステッカー。<br>
 <br>
-<strong>全10種類を無料でダウンロードできます！</strong><br>
-背景透過PNGなので、画像などに重ねてお楽しみいただけます。<br>
-※市松模様は透過部分を示す表示用の背景です。
+<strong>全10種類を10月22日（木）21時より公開予定！</strong>
 </p>
 
 <section class="phrases" id="phrase-list"></section>
 
 <p class="section-desc" style="margin-top:35px">
-※画像は個別にダウンロードできます。<br>
+※公開後は画像を個別にダウンロードできます。<br>
 ※スマートフォンで画像が表示された場合は、
 画像を長押しして保存してください。
 </p>
@@ -424,7 +398,6 @@ const list=document.getElementById("phrase-list");
 
 for(let i=1;i<=10;i++){
   const num=String(i).padStart(2,"0");
-  const file=`phrase-${num}.png`;
 
   const card=document.createElement("article");
   card.className="phrase";
@@ -432,24 +405,16 @@ for(let i=1;i<=10;i++){
   card.innerHTML=`
     <div class="number">STICKER ${num}</div>
     <div class="preview">
-      <img src="./${file}" alt="口癖ステッカー ${num}">
+      <div class="soon">COMING SOON</div>
+      <div class="date">
+        10月22日（木）<br>
+        21時 公開予定
+      </div>
     </div>
-    <a class="btn" href="./${file}" download>
-      ↓ ダウンロード
-    </a>
+    <div class="btn disabled">
+      10月22日 21時公開
+    </div>
   `;
-
-  const img=card.querySelector("img");
-  const btn=card.querySelector("a");
-
-  img.onerror=()=>{
-    img.style.display="none";
-    img.parentElement.textContent="画像準備中";
-    btn.removeAttribute("href");
-    btn.removeAttribute("download");
-    btn.classList.add("disabled");
-    btn.textContent="準備中";
-  };
 
   list.appendChild(card);
 }
